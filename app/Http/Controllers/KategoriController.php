@@ -76,9 +76,12 @@ diperbaharui');
      */
     public function destroy(string $id)
     {
-        $user = kategori::findOrFail($id);
-        $user->delete();
-        return redirect()->route('backend.kategori.index')->with('success', 'Data berhasil
-dihapus');
+        //         $user = kategori::findOrFail($id);
+        //         $user->delete();
+        //         return redirect()->route('backend.kategori.index')->with('success', 'Data berhasil
+        // dihapus');
+        $kategori = kategori::findOrFail($id);
+        $kategori->delete();
+        return redirect()->route('backend.kategori.index')->with('success', 'Data berhasil dihapus');
     }
 }

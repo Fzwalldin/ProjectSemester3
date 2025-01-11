@@ -208,6 +208,9 @@ diperbaharui');
                 unlink($thumbnailSm);
             }
         }
+        $produk = produk::findOrFail($id);
+        $produk->delete();
+        return redirect()->route('backend.produk.index')->with('success', 'Data berhasil dihapus');
     }
 
     // Method untuk menyimpan foto tambahan
