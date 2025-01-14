@@ -63,7 +63,7 @@
                                 <label>Foto Tambahan</label>
                                 <div id="foto-container">
                                     <div class="row">
-                                        @foreach ($show->gambar as $gambar)
+                                        @foreach ($show->fotoProduk as $gambar)
                                             <div class="col-md-8">
                                                 <img src="{{ asset('storage/img-produk/' . $gambar->foto) }}"
                                                     width="100%">

@@ -85,7 +85,7 @@ class ProdukController extends Controller
      */
     public function show(string $id)
     {
-        $produk = Produk::with('gambar')->findOrFail($id);
+        $produk = Produk::with('fotoProduk')->findOrFail($id);
         $kategori = Kategori::orderBy('nama_kategori', 'asc')->get();
         return view('backend.v_produk.show', [
             'judul' => 'Detail Produk',
